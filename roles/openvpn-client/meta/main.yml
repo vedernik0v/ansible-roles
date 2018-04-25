@@ -1,0 +1,23 @@
+galaxy_info:
+  author: Sergey Vedernikov <ved8ser@ya.ru>
+  description: Setup OpenVPN client
+
+  license: license (GPLv2, CC-BY, etc)
+
+  min_ansible_version: 2.2
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - xenial
+
+  tags:
+    - openvpn-client
+
+  galaxy_tags:
+    - client
+    - openvpn
+    - tunnel
+    - vpn
+
+dependencies: []

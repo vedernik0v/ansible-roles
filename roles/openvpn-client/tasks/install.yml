@@ -1,0 +1,7 @@
+- name: Install OpenVPN package
+  apt:
+    name: openvpn={{ openvpn_client_package_version }}
+    state: present
+    update_cache: yes
+  tags:
+    - install

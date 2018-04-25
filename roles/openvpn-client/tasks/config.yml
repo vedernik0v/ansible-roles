@@ -1,0 +1,10 @@
+- name: copy OpenVPN config file
+  template:
+    backup: yes
+    src: "{{ item }}.j2"
+    dest: "/{{ item }}"
+  with_items:
+    - etc/openvpn/client.conf
+  notify: restart openvpn client
+  tags:
+    - config

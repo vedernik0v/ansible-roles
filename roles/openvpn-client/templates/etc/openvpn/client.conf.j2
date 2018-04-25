@@ -1,0 +1,32 @@
+# {{ ansible_managed }} #
+
+client
+nobind
+dev tun
+
+remote {{ openvpn_client_host }}
+port {{ openvpn_client_port }}
+proto {{ openvpn_client_protocol }}
+
+<ca>
+{{ openvpn_client_ca_crt }}
+</ca>
+
+<cert>
+{{ openvpn_client_client_crt }}
+</cert>
+
+<key>
+{{ openvpn_client_client_key }}
+</key>
+
+<tls-auth>
+{{ openvpn_client_ta_key }}
+</tls-auth>
+key-direction 1
+
+comp-lzo
+persist-key
+persist-tun
+
+verb 3

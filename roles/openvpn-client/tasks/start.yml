@@ -1,0 +1,7 @@
+- name: start OpenVPN Service
+  service:
+    name: openvpn@client
+    state: started
+    enabled: yes
+  tags:
+    - start
